@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maksim Fialko — Engineering Manager</title>
+<meta name="description" content="Maksim Fialko — Engineering Manager and Systems Architecture Lead, Intercity at inDrive. Almaty, Kazakhstan.">
+<meta property="og:title" content="Maksim Fialko — Engineering Manager">
+<meta property="og:description" content="Engineering Manager / Systems Architecture Lead, Intercity at inDrive. 8 years in IT, high-load systems up to 250,000 RPS.">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f7f5;
+    --surface: #ffffff;
+    --text: #1b1d21;
+    --muted: #5f6570;
+    --line: #e4e4e0;
+    --accent: #2f6df6;
+    --accent-soft: #e8efff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f1115;
+      --surface: #171a20;
+      --text: #e8e9ec;
+      --muted: #9aa1ad;
+      --line: #262a33;
+      --accent: #7aa2ff;
+      --accent-soft: #1c2640;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0f1115;
+    --surface: #171a20;
+    --text: #e8e9ec;
+    --muted: #9aa1ad;
+    --line: #262a33;
+    --accent: #7aa2ff;
+    --accent-soft: #1c2640;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrap { max-width: 860px; margin: 0 auto; padding: 48px 16px 64px; }
+
+  header.hero { margin-bottom: 40px; }
+  .hero h1 { font-size: clamp(2rem, 6vw, 2.8rem); line-height: 1.1; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .hero .role { font-size: 1.15rem; font-weight: 500; margin: 0 0 16px; }
+  .hero .role span { color: var(--muted); font-weight: 400; }
+  .contacts { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--muted); font-size: 0.95rem; padding: 0; margin: 0; list-style: none; }
+  .actions { margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 8px 14px; border-radius: 8px; font-size: 0.9rem; font-weight: 500;
+    border: 1px solid var(--line); background: var(--surface); color: var(--text); cursor: pointer; font-family: inherit;
+  }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn:hover { text-decoration: none; filter: brightness(0.97); }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 0 0 40px; }
+  .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .stat b { display: block; font-size: 1.6rem; line-height: 1.2; }
+  .stat small { color: var(--muted); font-size: 0.85rem; }
+
+  section { margin-bottom: 40px; }
+  h2 {
+    font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted);
+    margin: 0 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--line);
+  }
+  p { margin: 0 0 12px; }
+
+  .job { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px 22px; margin-bottom: 16px; }
+  .job-head { display: flex; justify-content: space-between; gap: 8px 16px; flex-wrap: wrap; margin-bottom: 4px; }
+  .job h3 { margin: 0; font-size: 1.1rem; }
+  .job .when { color: var(--muted); font-size: 0.9rem; white-space: nowrap; }
+  .job .where { color: var(--muted); font-size: 0.9rem; margin-bottom: 12px; }
+  .job h4 { font-size: 0.85rem; margin: 16px 0 6px; color: var(--muted); font-weight: 600; }
+  ul.list { margin: 0; padding-left: 20px; }
+  ul.list li { margin-bottom: 6px; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+  .tags li {
+    font: 500 0.82rem/1 "JetBrains Mono", ui-monospace, monospace;
+    background: var(--accent-soft); color: var(--accent); padding: 7px 10px; border-radius: 6px;
+  }
+
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+  footer { color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); padding-top: 16px; }
+
+  @media (max-width: 640px) {
+    .wrap { padding-top: 32px; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .grid2 { grid-template-columns: 1fr; }
+    .job { padding: 16px; }
+  }
+
+  @media print {
+    :root { --bg: #fff; --surface: #fff; --text: #000; --muted: #444; --line: #ccc; --accent: #000; --accent-soft: #f0f0f0; }
+    .actions, .theme-toggle { display: none !important; }
+    .wrap { padding: 0; max-width: none; }
+    .job, .stat { break-inside: avoid; }
+    a { color: #000; }
+  }
+
+  .theme-toggle {
+    position: fixed; top: 16px; right: 16px; width: 38px; height: 38px; border-radius: 50%;
+    border: 1px solid var(--line); background: var(--surface); color: var(--text); cursor: pointer; font-size: 1rem;
+  }
+</style>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">◐</button>
+
+<main class="wrap">
+  <header class="hero">
+    <h1>Maksim Fialko</h1>
+    <p class="role">Engineering Manager <span>— Information Systems Architecture Lead, Intercity · inDrive</span></p>
+    <ul class="contacts">
+      <li>Almaty, Kazakhstan</li>
+      <li><a href="mailto:maxfialko@gmail.com">maxfialko@gmail.com</a></li>
+      <li><a href="https://linkedin.com/in/maximfialko" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/maxViolet" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+    <div class="actions">
+      <a class="btn primary" href="mailto:maxfialko@gmail.com">Contact me</a>
+      <button class="btn" onclick="window.print()">Download PDF</button>
+    </div>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><b>8</b><small>years in IT</small></div>
+    <div class="stat"><b>3</b><small>years in management</small></div>
+    <div class="stat"><b>~18</b><small>engineers in 3 teams</small></div>
+    <div class="stat"><b>250K</b><small>RPS peak load</small></div>
+  </div>
+
+  <section>
+    <h2>Summary</h2>
+    <p>Engineering Manager with 8 years of total IT experience and 3 years of management experience, functioning as the systems and software architecture owner for inDrive's Intercity product area — an international intercity transportation marketplace.</p>
+    <p>Owns architecture decisions, technology strategy, and system design across backend, mobile, and integration layers for a high-load product operating at up to 250,000 RPS, while managing the 3 product development teams (~18 engineers across backend, frontend, mobile, and QA) that deliver that architecture. Background also covers delivery management, hiring, mentorship, performance reviews, and cross-functional stakeholder management.</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <article class="job">
+      <div class="job-head">
+        <h3>inDrive — Engineering Manager / Systems Architecture Lead, Intercity</h3>
+        <span class="when">Aug 2020 – Present</span>
+      </div>
+      <div class="where">Almaty, Kazakhstan · remote-hybrid</div>
+
+      <h4>Architecture</h4>
+      <ul class="list">
+        <li>Own architecture and technology strategy for the Intercity international mobility product, including service boundaries, integration design, and system scalability for traffic of up to 250,000 RPS.</li>
+        <li>Directed migration of core service logic from city-ID based to coordinate-based architecture.</li>
+        <li>Designed the persistent storage architecture for driver and passenger form/screen state.</li>
+        <li>Led design and defense of a shared service architecture for the Intercity cluster, consolidating integrations across two business services, reducing engineering and infrastructure cost, and enabling retirement of the legacy service.</li>
+        <li>Directed design of a geo-distributed driver coordinate collection service, improving safety capabilities and unlocking additional safety-related product features.</li>
+        <li>Co-designed a step-by-step order form flow architecture, later adopted globally across the product.</li>
+      </ul>
+
+      <h4>Leadership</h4>
+      <ul class="list">
+        <li>Manage 3 product development teams (~18 engineers) across backend, frontend, mobile, and QA delivering the architecture above.</li>
+        <li>Progressed from Developer to Team Lead, then took on Engineering Manager / architecture ownership for Intercity from 2023.</li>
+        <li>Own engineering delivery, team growth, and quarterly technical goals; work closely with product managers, analysts, designers, the Head of Product, support, platform teams (Android/iOS, DevOps, DBA), and Legal.</li>
+        <li>Participated in hiring as developer and team lead: ~50 Android Developer interviews and ~20 Team Lead interviews, including English-speaking candidates.</li>
+        <li>Conduct regular one-on-one meetings, performance reviews, hiring and dismissal processes, team goal setting, PiP/IDP processes, and role-transition support.</li>
+      </ul>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3>Evotor — Android Developer</h3>
+        <span class="when">Aug 2019 – Aug 2020</span>
+      </div>
+      <div class="where">Moscow, Russia · full-time</div>
+      <ul class="list">
+        <li>Developed internal Android services for POS terminals, including a notification center and a receipt printing service.</li>
+        <li>Worked on POS terminal software covering software, device production, distribution, and support.</li>
+        <li>Supported marketing campaign delivery, system and fiscal event handling, cash register machine integrations, and fiscal storage device scenarios.</li>
+        <li>Configured Jenkins-based CI/debugging instruments for notification service scenarios.</li>
+        <li>Contributed to software used by approximately 300,000 POS terminals across Russia.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section>
+    <h2>Key Achievements</h2>
+    <ul class="list">
+      <li>Directed architecture consolidation of two business services into one, followed by retirement of the legacy service.</li>
+      <li>Led design of a geo-distributed driver coordinate collection service.</li>
+      <li>Directed migration from city-ID based service logic to coordinate-based architecture.</li>
+      <li>Built and launched 3 product development teams for inDrive Intercity.</li>
+      <li>Led technical prioritization for teams working across two business services.</li>
+      <li>Improved engineering process areas: unit test coverage, team-level infrastructure cost visibility, lead time automation, product analytics test coverage, and QA automation for critical flows.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Core Competencies</h2>
+    <ul class="list">
+      <li>System and service architecture, technology strategy, and technical design ownership</li>
+      <li>Distributed, high-load system design for international products</li>
+      <li>Architecture review, service consolidation, and technical debt prioritization</li>
+      <li>Cross-functional stakeholder management (product, platform, DevOps, DBA, Legal)</li>
+      <li>Engineering leadership and people management</li>
+      <li>Product engineering delivery and quarterly goal setting</li>
+      <li>Hiring, onboarding, mentorship, performance reviews, PiP and IDP processes</li>
+      <li>Remote, hybrid, international, and English-speaking collaboration</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Technical Background</h2>
+    <ul class="tags">
+      <li>AWS</li><li>Kubernetes</li><li>Go</li><li>Kotlin</li><li>Swift</li><li>Kafka</li><li>NATS</li>
+      <li>MySQL/Aurora</li><li>Redis</li><li>S3</li><li>Prometheus</li><li>Grafana</li><li>Terraform</li>
+      <li>Ansible</li><li>GitHub Actions</li><li>Android OS/AOSP</li><li>Java</li><li>Jenkins</li>
+    </ul>
+  </section>
+
+  <div class="grid2">
+    <section>
+      <h2>Certifications &amp; Training</h2>
+      <ul class="list">
+        <li><a href="https://stratoplan-school.com/cert/team/2026/January/Maksim_Fialko.pdf" target="_blank" rel="noopener">Stratoplan Team Lead Course</a></li>
+        <li>Internal workshops, leadership and management training programs, and internal events</li>
+        <li>Training on transferring a team to Growth Hacking approaches and processes</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Languages</h2>
+      <ul class="list">
+        <li>Russian — native</li>
+        <li>English — advanced</li>
+      </ul>
+      <h2 style="margin-top:24px">Links</h2>
+      <ul class="list">
+        <li><a href="https://play.google.com/store/apps/details?hl=en_US&amp;id=sinet.startup.inDriver" target="_blank" rel="noopener">inDrive on Google Play</a></li>
+        <li><a href="https://evotor.ru" target="_blank" rel="noopener">Evotor</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>© 2026 Maksim Fialko</footer>
+</main>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    try {
+      var saved = localStorage.getItem("theme");
+      if (saved) root.setAttribute("data-theme", saved);
+    } catch (e) {}
+    document.getElementById("themeToggle").addEventListener("click", function () {
+      var current = root.getAttribute("data-theme") ||
+        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      var next = current === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch (e) {}
+    });
+  })();
+</script>
+</body>
+</html>
